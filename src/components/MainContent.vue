@@ -110,7 +110,7 @@
     
     .content-block {
         overflow-x: hidden;
-        max-width: 1500px;
+        max-width: 100%;
         position: relative;
     }
 
@@ -219,6 +219,12 @@
         filter: brightness(110%);
     }
 
+    @media (max-width: 1900px) {
+        .main-text-block .text {
+            font-size: 20px;
+        }
+    }
+
     @media (max-width: 1000px) {
         .main-content {
             flex-direction: column;
@@ -242,10 +248,6 @@
         .main-text-block p.text {
             font-size: 20px;
         }
-    }
-
-    @media (max-width: 500px) {
-
     }
 
 </style>
