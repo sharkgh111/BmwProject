@@ -266,7 +266,7 @@
         }
     }
 
-    @media (450px >= width) {
+    @media (550px >= width) {
 
         .heading-content .heading {
             font-size: 22px;
