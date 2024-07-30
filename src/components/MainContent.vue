@@ -266,6 +266,27 @@
         }
     }
 
+    @media (450px >= width) {
+
+        .heading-content .heading {
+            font-size: 22px;
+        }
+
+        .main-text-block {
+            width: 350px;
+        }
+
+        .main-img-box img {
+            clip-path: none;
+            border-radius: 10px;
+        }
+
+        .main-img-box {
+            width: 350px;
+        }
+
+    }
+
 </style>
 
 <script>
