@@ -219,9 +219,25 @@
         filter: brightness(110%);
     }
 
-    @media (max-width: 1900px) {
+    @media (1800px <= width) {
+        .heading-content img {
+            width: 130px;
+        }
+
+        .heading-content .heading {
+            font-size: 36px;
+        }
+
+        .main-text-block {
+            width: 770px;
+        }
+        
         .main-text-block .text {
-            font-size: 20px;
+            font-size: 21px;
+        }
+
+        .main-img-box {
+            width: 750px;
         }
     }
 
