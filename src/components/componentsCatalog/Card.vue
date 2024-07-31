@@ -171,6 +171,61 @@
         width: 100%;
     }
 
+    @media (max-width: 1330px) {
+        .model-card {
+            height: 320px;
+            width: 80%;
+            padding: 0;
+            padding-bottom: 10px;
+            flex-direction: column;
+        }
+        .info-content {
+            flex-direction: column;
+            border: none;
+        }
+        .bmw-img-box {
+            margin: 0;
+            height: 100%;
+            max-width: 100%;
+        }
+        .info-content .heading {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            padding: 5px 0;
+        }
+        .info-content .char-container {
+            min-width: 100%;
+            padding:5px;
+            border: none;
+        }
+        .info-content .button-block {
+            width: 100%;
+            margin: 0;
+
+        }
+        .info-content .button-block ul {
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .button-block ul li svg {
+            width: 36px;
+            height: 36px;
+        }
+    }
+    @media (max-width: 950px) {
+        .model-card {
+            height: 300px;
+            width: 60%;
+            padding: 0;
+            padding-bottom: 10px;
+            flex-direction: column;
+        }
+        .bmw-img-box {
+            max-width: 80%;
+        }
+    }
+
 </style>
 
 <script>

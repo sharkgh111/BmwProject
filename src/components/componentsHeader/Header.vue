@@ -87,9 +87,7 @@
   @media (max-width: 500px) {
 
     header .bmw-logo-container {
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
-      place-items: center;
+      flex-wrap: wrap;
       gap: 20px;
     }
 

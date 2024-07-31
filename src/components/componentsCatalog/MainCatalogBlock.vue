@@ -5,7 +5,7 @@
                 <h3>Select series model "{{ selectedSeria }}"</h3>
             </div>
             <div class="main-bmw-content">
-                <ul v-if="selectedSeria" class="bookmarks-list">
+                <ul v-if="selectedSeria" class="card-list">
                         <Card 
                             v-for="model in models[selectedSeria]" 
                             :key="model.name" 
@@ -72,7 +72,7 @@
         font-style: italic;
     }
 
-    .select-model-block .bookmarks-list {
+    .select-model-block .card-list {
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -80,6 +80,25 @@
         padding: 10px;
         margin: 15px 0;
         gap: 20px;
+    }
+
+    @media (max-width: 1330px) {
+        .select-model-block .card-list {
+           display: grid;
+           grid-template-columns: repeat(3, 2fr);
+           place-items: center;
+           place-content: center;
+           gap: 20px;
+        }
+        .main-catalog-content {
+            margin: 20px 0;
+        }
+    }
+    @media (max-width: 950px) {
+        .select-model-block .card-list {
+           grid-template-columns: repeat(1, 1fr);
+           gap: 40px;
+        }
     }
 
 </style>

@@ -53,7 +53,7 @@
         padding: 20px;
         background: linear-gradient(45deg, rgb(37, 75, 173), rgb(16, 28, 96));
         box-shadow: 0 0 20px #000;
-        max-width: 60px;
+        width: 30px;
         height: 350px;
         margin-left: 20px;
         border-radius: 10px 0 0 10px;
@@ -137,6 +137,25 @@
     .sidebar-list .icon-rem:hover {
         transform: scale(1.1);
         filter: drop-shadow(0 0 15px #ff0000);
+    }
+
+    @media (max-width: 1330px) {
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+        }
+        .main-container .sidebar-list {
+            margin: 0;
+            flex-direction: row;
+            border-radius: none;
+            width: 100%;
+            height: 30px;
+        }
+        .sidebar-list:hover {
+            padding-right: 0;
+        }
     }
 
 </style>

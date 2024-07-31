@@ -42,6 +42,12 @@
         max-width: 100%;
     }
 
+    @media (max-width: 1330px) {
+        .select-content {
+            flex-direction: column;
+        }
+    }
+
 </style>
 
 <script>

@@ -10,7 +10,7 @@
 
     .select-seria-block {
         list-style-type: none;
-        max-width: 230px;
+        width: 170px;
         height: 400px;
         padding: 25px 20px;
         margin-right: 20px;
@@ -60,7 +60,17 @@
     .select-seria-block img {
         width: 100%;
     }
-    
+
+    @media (max-width: 1330px) {
+        .select-seria-block {
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            height: auto;
+            flex-wrap: wrap;
+        }
+    }
+
 </style>
 
 <script>
