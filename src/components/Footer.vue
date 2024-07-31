@@ -157,7 +157,7 @@
         list-style-type: none;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
         footer .list-block {
             padding: 0;
         }
