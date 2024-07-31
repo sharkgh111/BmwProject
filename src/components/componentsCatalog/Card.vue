@@ -215,14 +215,15 @@
     }
     @media (max-width: 950px) {
         .model-card {
-            height: 300px;
+            height: 320px;
             width: 60%;
             padding: 0;
             padding-bottom: 10px;
             flex-direction: column;
         }
-        .bmw-img-box {
-            max-width: 80%;
+        .bmw-img-box img {
+            width: 90%;
+            padding-bottom: 20px;
         }
     }
 
