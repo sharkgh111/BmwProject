@@ -191,7 +191,7 @@
         padding: 0 15px;
         font-style: italic;
         margin-bottom: 25px;
-        transition: left 0.4s ease, opacity 0.5s ease, background-position 4s ease;
+        transition: left 0.4s ease, opacity 0.5s ease, background-position 3s ease, filter 0.6s ease;
         background: linear-gradient(to left, rgb(121, 195, 255), rgb(62, 99, 222));
         background-size: 200% 100%;
         background-clip: text;
@@ -221,6 +221,7 @@
         left: 0;
         opacity: 1;
         background-position: -100%;
+        filter: drop-shadow(0 0 1rem #a1cae9);
     }
 
     .content-container .image:hover::before {
@@ -233,9 +234,10 @@
     }
 
     .text-block .heading {
+        --bmw-main-color-: rgb(0, 166, 255);
         font-style: italic;
         margin-bottom: 15px;
-        color: rgb(0, 166, 255);
+        color: var(--bmw-main-color-);
     }
 
     .text-block h2 {
