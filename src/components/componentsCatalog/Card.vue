@@ -100,7 +100,7 @@
         width: 100%;
         height: 130%;
         object-fit: cover;
-        transform: translate(5px, -5px);
+        transform: translate(7px, -5px);
         margin: 0 auto;
     }
 
