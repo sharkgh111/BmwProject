@@ -17,10 +17,10 @@
              <li class="icon-el-box" :class="{ 'active': activeName === 'Catalog' }" @click="setActive('Catalog')" title="Go to Catalog">
                   <div class="icon">
                     <lord-icon
-                      src="https://cdn.lordicon.com/lyrrgrsl.json"
-                      trigger="hover"
-                      colors="primary:#ffffff"
-                      style="width:30px;height:30px">
+                       src="https://cdn.lordicon.com/zyzoecaw.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        style="width:30px;height:30px">
                     </lord-icon>
                   </div>
                     <span>
@@ -30,7 +30,7 @@
              <li class="icon-el-box" :class="{ 'active': activeName === 'about' }" @click="setActive('about')" title="Go to About">
                   <div class="icon">
                     <lord-icon
-                      src="https://cdn.lordicon.com/kthelypq.json"
+                      src="https://cdn.lordicon.com/ijahpotn.json"
                       trigger="hover"
                       colors="primary:#ffffff"
                       style="width:30px;height:30px">

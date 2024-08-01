@@ -68,6 +68,9 @@
             margin: 0;
             height: auto;
             flex-wrap: wrap;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 0;
         }
     }
 
@@ -81,6 +84,7 @@ export default {
         selectedSeria(seriaName) {
         this.$emit('select-series', seriaName);
         }
+        
     }
 }
 </script>

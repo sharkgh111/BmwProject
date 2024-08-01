@@ -181,18 +181,21 @@
         position: absolute;
         padding: 10px;
         top: 80px;
-        text-shadow: 0 0 10px #000;
         z-index: 600;
     }
 
     .content-container .image .overlay-text .heading {
         position: relative;
-        color: #bbedff;
+        color: transparent;
         font-size: 30px;
         padding: 0 15px;
         font-style: italic;
         margin-bottom: 25px;
-        transition: left 0.4s ease, opacity 0.5s ease;
+        transition: left 0.4s ease, opacity 0.5s ease, background-position 4s ease;
+        background: linear-gradient(to left, rgb(121, 195, 255), rgb(62, 99, 222));
+        background-size: 200% 100%;
+        background-clip: text;
+        background-position: 0;
     }
     
     .content-container .image .overlay-text .par {
@@ -217,6 +220,7 @@
     .image:hover .overlay-text .par {
         left: 0;
         opacity: 1;
+        background-position: -100%;
     }
 
     .content-container .image:hover::before {
@@ -275,12 +279,12 @@ export default {
     data() {
         return {
             images: [
-                { img: '/images/bmwaboutmain1.jpg', alt: 'BMWmain1', grayscale: 0, header: 'Значение логотипа', text: 'Логотип BMW, синий и белый, напоминает авиационный пропеллер. Этот дизайн был выбран в честь первоначальной деятельности компании в авиационной промышленности.' },
-                { img: '/images/bmwaboutmain2.jpg', alt: 'BMWmain2', grayscale: 0, header: 'Иконные модели', text: 'BMW 3 Series, начиная с первой версии в 1975 году, стала одной из самых успешных и известных моделей марки, известной своей динамикой и управляемостью.' },
-                { img: '/images/bmwaboutmain3.jpg', alt: 'BMWmain3', grayscale: 0, header: 'Первый электромобиль', text: 'BMW представила свой первый электромобиль, i3, в 2013 году. Этот автомобиль был спроектирован как экологически чистое решение и стал одним из первых в линейке электромобилей марки.' },
-                { img: '/images/bmwaboutmain4.jpg', alt: 'BMWmain4', grayscale: 0, header: 'Удовольствия от вождения', text: 'BMW известна своей философией "удовольствия от вождения" (The Ultimate Driving Machine), которая отражает их стремление создавать автомобили, которые предлагают выдающуюся управляемость и драйвовые ощущения.' },
-                { img: '/images/bmwaboutmain5.jpg', alt: 'BMWmain5', grayscale: 0, header: 'Иновационные технологии', text: 'BMW активно разрабатывает технологии автономного вождения и интеллектуальных систем помощи водителю. Их система iDrive, представленная в 2001 году, стала одним из первых успешных примеров интуитивно понятного интерфейса для управления автомобильными функциями.' },
-                { img: '/images/bmwaboutmain6.jpg', alt: 'BMWmain6', grayscale: 0, header: 'История компании', text: 'BMW была основана в 1916 году как производитель авиационных двигателей. Только после Первой мировой войны компания переключилась на производство мотоциклов и автомобилей.' }
+                { img: '/images/bmwaboutmain1.jpg', alt: 'BMWmain1', grayscale: 0, header: 'Meaning of the logo', text: 'The BMW logo, blue and white, resembles an aircraft propeller. This design was chosen to honor the company`s early work in the aviation industry.' },
+                { img: '/images/bmwaboutmain2.jpg', alt: 'BMWmain2', grayscale: 0, header: 'Iconic models', text: 'The BMW 3 Series has become one of the brand`s most successful and well-known models since its first version in 1975, renowned for its dynamics and handling.' },
+                { img: '/images/bmwaboutmain3.jpg', alt: 'BMWmain3', grayscale: 0, header: 'The first electric car', text: 'BMW introduced its first electric car, the i3, in 2013. The car was designed as an eco-friendly solution and was one of the first in the brand`s line of electric vehicles.' },
+                { img: '/images/bmwaboutmain4.jpg', alt: 'BMWmain4', grayscale: 0, header: 'Driving pleasure', text: 'BMW is known for its philosophy of "The Ultimate Driving Machine", which reflects their commitment to creating cars that offer outstanding handling and driving experience.' },
+                { img: '/images/bmwaboutmain5.jpg', alt: 'BMWmain5', grayscale: 0, header: 'Innovative technologies', text: 'BMW is actively developing autonomous driving technologies and intelligent driver assistance systems. Their iDrive system, introduced in 2001, was one of the first successful examples of an intuitive interface for controlling car functions.' },
+                { img: '/images/bmwaboutmain6.jpg', alt: 'BMWmain6', grayscale: 0, header: 'History of the company', text: 'BMW was founded in 1916 as a manufacturer of aircraft engines. It was only after World War I that the company switched to producing motorcycles and cars.' }
             ],
             effectWindowHeight: 700
         }
