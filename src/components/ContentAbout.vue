@@ -174,7 +174,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: filter 0.2s ease; /* переход для фильтра */;
+        transition: filter 0.2s ease;
     }
 
     .content-container .image .overlay-text {
@@ -191,8 +191,8 @@
         padding: 0 15px;
         font-style: italic;
         margin-bottom: 25px;
-        transition: left 0.4s ease, opacity 0.5s ease, background-position 3s ease, filter 0.6s ease;
-        background: linear-gradient(to left, rgb(121, 195, 255), rgb(62, 99, 222));
+        transition: left 0.4s ease, opacity 0.5s ease, background-position 3s ease, filter 0.9s ease;
+        background: linear-gradient(to left, hsl(180, 100%, 84%), hsl(226, 71%, 56%));
         background-size: 200% 100%;
         background-clip: text;
         background-position: 0;
