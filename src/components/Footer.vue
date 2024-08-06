@@ -22,25 +22,16 @@
             <div class="account-block">
                 <h3>Account</h3>
                     <ul class="account">
-                        <li>
+                        <li @click="activeProfileAdd(1)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill-down" viewBox="0 0 16 16">
                                 <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V10.5a.5.5 0 0 0-1 0v2.793l-.646-.647a.5.5 0 0 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
-                            </svg>
-                            <p>
-                                Login
-                            </p>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
-                                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                                 <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
                             </svg>
                             <p>
                                 Sign Up
                             </p>
                         </li>
-                        <li>
+                        <li @click="activeProfileAdd(2)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
                                 <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
                             </svg>
@@ -126,11 +117,237 @@
                     </ul>
             </div>
         </div>
+        <div v-if="activeLogin == 1" class="input-form-container">
+            <form>
+                <div class="form-wrapper">
+                    <div class="logo-container">
+                        <img src="/logo/bmwicon.png" alt="Logo">
+                    </div>
+                    <div class="heading-block">
+                        <h2>SIGN UP</h2>
+                    </div>
+                    <div class="inputs-container">
+                        <div class="email input-box">
+                            <input type="email" placeholder="" id="email" v-model="email">
+                                <label for="email" class="label">Email</label>
+                                    <div class="icon" @click="clearValue('email')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                        </svg>
+                                    </div>
+                        </div>
+                        <div class="password input-box">
+                            <input :type="inputTypePass" placeholder="" id="pass" v-model="password">
+                                <label for="pass" class="label">Password</label>
+                                    <div class="icon" @click="clearValue('password')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="icon-pass-vis" @click="isPassword = !isPassword">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                    </div>
+                        </div>
+                        <div class="conf-password input-box">
+                            <input type="password" placeholder="" id="conf-pass" v-model="confirm">
+                                <label for="conf-pass" class="label">Confirm password</label>
+                                    <div class="icon" @click="clearValue('confirm')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="err-sec">
+                                        <p class="error">{{ errorString }}</p>
+                                    </div>
+                        </div>
+                    </div>
+                        <div class="rem-block">
+                            <input type="checkbox" id="rem">
+                                <label for="rem" class="rem-label">Remember me</label>
+                        </div>
+                            <div class="button-container">
+                                <button type="button" @click="sendData" @keyup.enter="sendData">CREATE</button>
+                            </div>
+                </div>
+            </form>
+        </div>
     </div>
   </footer>
 </template>
 
 <style scoped>
+
+    .footer-content .input-form-container {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input-form-container form {
+        width: 440px;
+        height: 550px;
+        background-color: #001523a7;
+        border-radius: 25px;
+        border: 1px solid #00b3ff;
+        padding: 10px;
+        user-select: text;
+        box-shadow: 0 0 75px #0091ff65;
+    }
+
+    .input-form-container form .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form .form-wrapper .logo-container {
+        width: 105px;
+        position: relative;
+        top: -20px;
+    }
+
+    form .form-wrapper .logo-container img {
+        width: 100%;
+        filter: drop-shadow(2px 2px 15px #000);
+    }
+
+    form .form-wrapper .heading-block h2 {
+        font-size: 26px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 15px #000;
+        color: #c7e6ff;
+    }
+
+    .form-wrapper .inputs-container {
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
+        margin: 30px 0;
+    }
+
+    .form-wrapper .inputs-container .input-box {
+        position: relative;
+    }
+
+    .form-wrapper .inputs-container input {
+        box-sizing: border-box;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 2px solid #00b3ff;
+        transition: all 0.2s ease;
+        color: #dadada;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+    .inputs-container input:focus {
+        border-color: rgb(0, 221, 255);
+        filter: drop-shadow(0 0 10px rgb(0, 221, 255));
+    }
+
+    .inputs-container .input-box input:focus + .label,
+    input:not(:placeholder-shown) + .label {
+        background-color: rgb(0, 200, 255);
+        transform: translateY(-20px);
+    }
+
+    .inputs-container .input-box label {
+        background-color: #008ecaed;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0 8px;
+        border-radius: 15px;
+        cursor: pointer;
+        position: absolute;
+        transition: all 0.4s ease;
+        top: 25%;
+        left: 10px;
+        color: #fff;
+        font-style: italic;
+    }
+
+    .inputs-container .input-box .icon {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .inputs-container .input-box .icon-pass-vis {
+        position: absolute;
+        top: 30%;
+        right: 35px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .inputs-container .input-box .icon-pass-vis:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .inputs-container .input-box .err-sec {
+        font-size: 13px;
+        color: red;
+        padding-left: 10px;
+        padding-top: 10px;
+        position: absolute;
+        left: 0;
+        font-style: italic;
+    }
+
+    form .form-wrapper .rem-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    form .form-wrapper .rem-block input {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    
+    form .form-wrapper .rem-block label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .form-wrapper .button-container button {
+        padding: 15px 100px;
+        margin: 20px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: #00b3ff;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: 5px 5px 20px #00000068;
+        letter-spacing: 3px;
+        font-style: italic;
+        transition: background-color 0.2s ease;
+    }
+
+    .form-wrapper .button-container button:hover {
+        background-color: #00a0e4;
+    }
 
     footer {
         padding: 40px 10px 10px 10px;
@@ -203,11 +420,54 @@
 
     @media (max-width: 480px) {
         footer .list-block {
-            padding: 0;
+            padding: 5px;
         }
     }
 
 </style>
 
 <script>
+export default {
+    data() {
+        return {
+            activeLogin: null,
+            email: '',
+            password: '',
+            confirm: '',
+            errorString: '',
+            isPassword: true,
+        }
+    },
+    methods: {
+        activeProfileAdd(n) {
+            this.activeLogin = n;
+        },
+        clearValue(value) {
+            if (this[value] == 0) {
+                this.errorString = `Field ${value} is empty`
+            } else {
+                this[value] = '';
+                    this.errorString = ''
+            }
+        },
+        sendData() {
+            if (this.email == '') {
+                this.errorString = 'Email not entered';
+            } else if (this.password == '') { 
+                this.errorString = 'Password not entered'
+            } else if (this.confirm == '') {
+                this.errorString = 'Password not confirmed'
+            } else if (this.password !== this.confirm) {
+                this.errorString = 'Password mismatch'
+            } else {
+                this.errorString = '';
+            }
+        }
+    },
+    computed: {
+        inputTypePass() {
+             return this.isPassword ? 'password' : 'text'
+        }
+    }
+}
 </script>

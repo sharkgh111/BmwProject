@@ -30,7 +30,8 @@
     user-select: none;
     background: #000;
     box-shadow: inset 0 0 25px #000000;
-    max-width: 1900px;
+    max-width: auto;
+    accent-color: rgb(0, 229, 255);
   }
 
 </style>
