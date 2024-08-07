@@ -180,175 +180,6 @@
 
 <style scoped>
 
-    .footer-content .input-form-container {
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(20px);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .input-form-container form {
-        width: 440px;
-        height: 550px;
-        background-color: #001523a7;
-        border-radius: 25px;
-        border: 1px solid #00b3ff;
-        padding: 10px;
-        user-select: text;
-        box-shadow: 0 0 75px #0091ff65;
-    }
-
-    .input-form-container form .form-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    form .form-wrapper .logo-container {
-        width: 105px;
-        position: relative;
-        top: -20px;
-    }
-
-    form .form-wrapper .logo-container img {
-        width: 100%;
-        filter: drop-shadow(2px 2px 15px #000);
-    }
-
-    form .form-wrapper .heading-block h2 {
-        font-size: 26px;
-        font-family: 'Poppins', sans-serif;
-        letter-spacing: 5px;
-        text-shadow: 2px 2px 15px #000;
-        color: #c7e6ff;
-    }
-
-    .form-wrapper .inputs-container {
-        width: 330px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 25px;
-        margin: 30px 0;
-    }
-
-    .form-wrapper .inputs-container .input-box {
-        position: relative;
-    }
-
-    .form-wrapper .inputs-container input {
-        box-sizing: border-box;
-        width: 100%;
-        outline: none;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 20px;
-        background-color: transparent;
-        border: 2px solid #00b3ff;
-        transition: all 0.2s ease;
-        color: #dadada;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-    }
-
-    .inputs-container input:focus {
-        border-color: rgb(0, 221, 255);
-        filter: drop-shadow(0 0 10px rgb(0, 221, 255));
-    }
-
-    .inputs-container .input-box input:focus + .label,
-    input:not(:placeholder-shown) + .label {
-        background-color: rgb(0, 200, 255);
-        transform: translateY(-20px);
-    }
-
-    .inputs-container .input-box label {
-        background-color: #008ecaed;
-        font-family: 'Poppins', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        padding: 0 8px;
-        border-radius: 15px;
-        cursor: pointer;
-        position: absolute;
-        transition: all 0.4s ease;
-        top: 25%;
-        left: 10px;
-        color: #fff;
-        font-style: italic;
-    }
-
-    .inputs-container .input-box .icon {
-        position: absolute;
-        top: 30%;
-        right: 10px;
-        cursor: pointer;
-    }
-
-    .inputs-container .input-box .icon-pass-vis {
-        position: absolute;
-        top: 30%;
-        right: 35px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .inputs-container .input-box .icon-pass-vis:hover {
-        color: rgb(255, 255, 255);
-    }
-
-    .inputs-container .input-box .err-sec {
-        font-size: 13px;
-        color: red;
-        padding-left: 10px;
-        padding-top: 10px;
-        position: absolute;
-        left: 0;
-        font-style: italic;
-    }
-
-    form .form-wrapper .rem-block {
-        width: 100%;
-        text-align: center;
-    }
-
-    form .form-wrapper .rem-block input {
-        margin-right: 5px;
-        cursor: pointer;
-    }
-    
-    form .form-wrapper .rem-block label {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        color: #fff;
-    }
-
-    .form-wrapper .button-container button {
-        padding: 15px 100px;
-        margin: 20px 0;
-        border: none;
-        cursor: pointer;
-        border-radius: 20px;
-        background-color: #00b3ff;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-        box-shadow: 5px 5px 20px #00000068;
-        letter-spacing: 3px;
-        font-style: italic;
-        transition: background-color 0.2s ease;
-    }
-
-    .form-wrapper .button-container button:hover {
-        background-color: #00a0e4;
-    }
-
     footer {
         padding: 40px 10px 10px 10px;
         color: #cecece;
@@ -416,6 +247,178 @@
         row-gap: 10px;
         margin: 15px 0;
         list-style-type: none;
+    }
+
+    .footer-content .input-form-container {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input-form-container form {
+        width: 440px;
+        height: 550px;
+        background-color: #001a23c0;
+        border-radius: 55px;
+        border: 1px solid #00b3ff;
+        padding: 10px;
+        user-select: text;
+        box-shadow: 0 0 75px #0091ff65;
+    }
+
+    .input-form-container form .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form .form-wrapper .logo-container {
+        width: 105px;
+        position: relative;
+        top: -20px;
+    }
+
+    form .form-wrapper .logo-container img {
+        width: 100%;
+        filter: drop-shadow(2px 2px 15px #000);
+    }
+
+    form .form-wrapper .heading-block h2 {
+        font-size: 26px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 15px #000;
+        color: #c7e6ff;
+    }
+
+    .form-wrapper .inputs-container {
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
+        margin: 30px 0;
+    }
+
+    .form-wrapper .inputs-container .input-box {
+        position: relative;
+    }
+
+    .form-wrapper .inputs-container input {
+        box-sizing: border-box;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 2px solid #00b3ff;
+        transition: all 0.2s ease;
+        color: #dadada;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .inputs-container input:focus {
+        border-color: hsl(162, 100%, 80%);
+        filter: drop-shadow(0 0 10px rgb(0, 255, 166));
+        cursor: text;
+    }
+
+    .inputs-container .input-box input:focus + .label,
+    input:not(:placeholder-shown) + .label {
+        background-color: rgb(0, 255, 174);
+        transform: translateY(-20px);
+    }
+
+    .inputs-container .input-box label {
+        background-color: #008ecaed;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0 8px;
+        border-radius: 15px;
+        cursor: pointer;
+        position: absolute;
+        transition: all 0.4s ease;
+        top: 25%;
+        left: 10px;
+        color: #fff;
+        font-style: italic;
+    }
+
+    .inputs-container .input-box .icon {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .inputs-container .input-box .icon-pass-vis {
+        position: absolute;
+        top: 30%;
+        right: 35px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .inputs-container .input-box .icon-pass-vis:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .inputs-container .input-box .err-sec {
+        font-size: 14px;
+        font-weight: default;
+        color: red;
+        padding-left: 10px;
+        padding-top: 10px;
+        position: absolute;
+        left: 0;
+        font-style: italic;
+    }
+
+    form .form-wrapper .rem-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    form .form-wrapper .rem-block input {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    
+    form .form-wrapper .rem-block label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .form-wrapper .button-container button {
+        padding: 15px 100px;
+        margin: 20px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        background: linear-gradient(230deg, rgb(0, 187, 255), rgb(0, 64, 128));
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: 5px 5px 20px #00000068;
+        letter-spacing: 3px;
+        font-style: italic;
+        transition: filter 0.2s ease;
+    }
+
+    .form-wrapper .button-container button:hover {
+        filter: brightness(80%);
     }
 
     @media (max-width: 480px) {
