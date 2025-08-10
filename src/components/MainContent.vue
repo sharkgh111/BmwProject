@@ -5,7 +5,7 @@
                 <div class="main-text-block">
                     <div class="heading-content">
                         <img src="/logo/bmwicon.png" alt="BMWlogo">
-                            <h1 class="heading">55555 Bayerische Motoren Werke AG</h1>
+                            <h1 class="heading">Bayerische Motoren Werke AG</h1>
                     </div>
                         <p class="text">
                             German manufacturer of cars, motorcycles and engines, founded in 1916. 
